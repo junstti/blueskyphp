@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: php-backend
+    env: docker
+    repo: https://github.com/junstti/BlueSkyPHP.git
+    branch: main
+    plan: free
+    rootDir: /
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: MONGO_URI
+        value: "mongodb+srv://adminn:4vhwvomvuuN06d7t@cluster.mongodb.net/dbname"
+    healthCheckPath: "/"
